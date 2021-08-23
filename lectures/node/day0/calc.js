@@ -15,16 +15,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 function squaredFunction(num) {
     return num * num;
 };
@@ -42,6 +32,39 @@ function anotherFunction() {
 // }
 module.exports = {
     squaredFx: squaredFunction,
-    squaredFx2: squaredFx2,
-    whatever: 'string of whatever'
+    anotherFx: anotherFunction,
+    whatever: 'string of whatever',
+    numnum: 4,
+    bool: false
 } /// 
+
+
+
+
+
+
+
+
+
+// literals
+// 3
+// true
+// ''
+// {}
+// obj's in JS pair similar detailed information about one thing
+
+// {
+//     key: value
+// }
+
+// const instructor = {
+//     name: 6,
+//     location: 'brooklyn'
+// }
+
+// console.log(instructor.name) // patrick
+
+
+// module.exports = {
+//     key: value
+// }

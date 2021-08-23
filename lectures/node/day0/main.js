@@ -3,20 +3,19 @@ const fxs = require('./calc'); // JS has first class functions
 
 
 
+console.log(fxs) // entire object that was exported
+console.log(fxs.squaredFx(4)) // entirety fo that squaredfx
+console.log(fxs.squaredFx(3)) // 9
+
+
+
+console.log(fxs.whatever); // 
 
 
 
 
 
 
-
-console.log(fxs) // 
-console.log(fxs.squaredFx) // 
-console.log(fxs.squaredFx(2)) // 
-
-
-
-// console.log(fxs.whatever); // 
 
 
 

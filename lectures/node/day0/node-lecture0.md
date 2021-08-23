@@ -41,7 +41,7 @@ Conceptually we never want to be stuck on a given problem for more than 20 minut
 
 7) If you can not figure it out yet now head online in this order — documentation, blogs/vids/articles, stack overflow. When using google for these look for **recent** posts.
 
-8) If you are still stuck you need to ask somebody for help. Utilize your networks. Start thinking about the fact you will not have this BU network soon and begin thinking about how to create your own moving forward. Twitter, dischords, slack channels, meetups.
+8) If you are still stuck you need to ask somebody for help. Utilize your networks. Start thinking about the fact you will not have these networks soon and begin thinking about how to create your own moving forward. Twitter, dischords, slack channels, meetups.
 
 ### 4. How To Ask a "Good" Question
 
@@ -61,7 +61,7 @@ Asking a good question is not only for yourself but helps the person helping you
 
 Lousely typed dynamic scripting language.
 
-_Syntax_
+[syntax](https://github.com/airbnb/javascript)
 
     nouns & verbs
 
@@ -86,13 +86,13 @@ _Objects and Functions_
 - Objects ({} and others), used to group related data and code.
 - Functions (x => x * 2 and others), used to refer to code.
 
-JS has 1st class functions, which means:
+Functions in JS are explicitly returned. JS has 1st class functions, which means:
 
-1) 
+1) Store fx's as values
 
-2)
+2) Pass around fx's as arguments
 
-3)
+3) Fx's can be returned from other fx's
 
 Function Invocation
 
