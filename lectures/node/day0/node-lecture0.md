@@ -61,6 +61,8 @@ Asking a good question is not only for yourself but helps the person helping you
 
 Lousely typed dynamic scripting language.
 
+_Syntax_
+
     nouns & verbs
 
 #### **Values**
@@ -123,6 +125,8 @@ Variables are not values.
 Variables point to values.
 
 _Declaratios & Assignment_
+
+_Var vs. Let vs. Const_
 
 ### 6. Node.js => Node Patterns and Modularization
 
