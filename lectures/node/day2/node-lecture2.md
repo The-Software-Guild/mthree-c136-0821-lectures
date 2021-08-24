@@ -1,0 +1,1 @@
+route paths/ resource operations

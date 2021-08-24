@@ -1,12 +1,76 @@
 // notes.js
 
 
+// a callback fx in js is a fx that is passed as an argument to another fx
+
+const cb = (num1c, num2c) => {
+     console.log(num1c + num2c)
+}
+
+
+const higherOrderFunction = (cb, num1, num2) => {
+     // parameters act as local variables within a givin block scope
+     // console.log(arguments[1])
+
+     cb(num1, num2)
+} // output to the console two numbers added together
+
+
+// higherOrderFunction(2, 3) // 9
+
+// arguments in JS are arbitrary meaning 
+
+// two ways to hold information in JS
+// array is a data structure 
+
+// {} => to hold more detailed info on a singular thing
+// [] => hold many thigns
+
+// const person = {
+//      name: 'patrick', 
+//      location: 'bk',
+//      records: [alot, 2, 3],
+//      example: {},
+//      methodExample: function() {
+//           console.log(this.name + ' ' + this.location)
+//      }
+// }
+
+// person.methodExample() // patrick bk
+
+// const exampleArray = [patrick, cordelia, [], {}]
+
+
+// arrow fx's do NOT create thier own lexical scope
+// the value of this will be different
+
+
+// scoping
+// global
+// function/block
+
+
+function closureExample() {
+     console.log(name)
+     
+
+     const insideFx = () => {
+          var name = 'patrick'
+          console.log('inside')
+     }
+
+     insideFx()
+}
+
+closureExample() //error 
+
+
+
 // js single threaded LIFO
-// non-blocking i/o async
 
-// non-blocking 
+// 1, 2, 3, 4
 
-
+// Node non-blocking i/o async
 
 
 // In computing, a stateless protocol is a communications protocol in which no session information is retained by the receiver, usually a server. 
@@ -31,7 +95,6 @@
 
 // cookies -> js/browser based
 // localStorage/sessionStorage -> js/browser based
-
 
 // database -> external
 

@@ -14,8 +14,11 @@ Learnign goals for node-day1 => As we ramp up the pace we take a deep dive into 
 ### 1. Day 0 Recap
 
 -Problem Solving Process
+
 -How To Ask a "Good" Question
+
 -Vanilla JS Refresh (values, types)
+
 -Node.js => Node Patterns and Modularization
 
 ### 2. Initializing Node.js Projects
