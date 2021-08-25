@@ -18,8 +18,11 @@
 // allows the user to update a todo by its _id,
 // allows the user to delete a todo by its _id, and
 // allows the user to retrieve a single todo by its _id.
+// add RESTful status codes to all req including the upcoming error handler
 
-// bonus: create a frontend client portal to connect and perform these CRUD opperations (hint: check out the 
+// BONUS: add a default error handler and sucessful handle and test your errors
+
+// DOUBLE_bonus: create a frontend client portal to connect and perform these CRUD opperations (hint: check out the 
 // axios npm package for making HTTP request from a node based frontend application)
 
-// DOUBLE_bonus: refactor the frontend to React.js
+// TRIPPLE_bonus: refactor the frontend to React.js

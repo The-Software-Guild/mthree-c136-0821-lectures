@@ -8,9 +8,10 @@ Learnign goals for node-day2 => Dive deeper into Express.js while being introduc
     2) Express.js
     3) Nodemon 
     4) API's
-    5) URL Parameters & Queries
-    6) Error Handling
-    7) Postman
+    5) Middleware
+    6) URL Parameters & Queries
+    7) Error Handling
+    8) Postman
 
 ### 1. Day 1 Recap
 
@@ -22,7 +23,7 @@ Learnign goals for node-day2 => Dive deeper into Express.js while being introduc
 
 - The HTTP Req/Res Cycle
 
-- Array Indexing & .gitignore
+- Array Indexing & .gitignore & Serialization
 
 ### 2. Express.js
 
@@ -80,7 +81,24 @@ The guidlines for a "RESTful" api:
 
 [REST API N+1 Problem](https://restfulapi.net/rest-api-n-1-problem/)
 
-### 5. URL Parameters & Queries
+### 5. Middleware
+
+Express is a routing and middleware web framework that has minimal functionality of its own: An Express application is essentially a series of middleware function calls.
+
+Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. The next middleware function is commonly denoted by a variable named next.
+
+Middleware functions can perform the following tasks:
+
+- Execute any code.
+- Make changes to the request and the response objects.
+- End the request-response cycle.
+- Call the next middleware function in the stack.
+
+If the current middleware function does not end the request-response cycle, it must call next() to pass control to the next middleware function. Otherwise, the request will be left hanging.
+
+_see assets_
+
+### 6. URL Parameters & Queries
 
 [Anatomy of a URL](https://doepud.co.uk/blog/anatomy-of-a-url)
 
@@ -118,7 +136,7 @@ Here is an example of a URL with query strings attached:
 
 Your query parameters can be retrieved from the query object on the request object sent to your route (req.query). It is in the form of an object in which you can directly access the query parameters you care about. In this case Express handles all of the URL parsing for you and exposes the retrieved parameters as this object.
 
-### 6. Error Handling
+### 7. Error Handling
 
 Error Handling refers to how Express catches and processes errors that occur both synchronously and asynchronously. Express comes with a default error handler so you don’t need to write your own to get started.
 
@@ -142,4 +160,4 @@ For errors returned from asynchronous functions invoked by route handlers and mi
         })
     })
 
-### 7. Postman
+### 8. Postman

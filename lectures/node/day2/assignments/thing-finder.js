@@ -1,6 +1,6 @@
 // thing finder.js
 
-//For this assignment, you will create a server with a GET route that is able 
+// For this assignment, you will create a server with a GET route that is able 
 // to return data including filtering results based on URL query parameters.
 
 // create an items array of objects to simulate fake data. each item object should contain 
@@ -33,3 +33,6 @@
 
 // For the purposes of this exercise, you can write your server code with the assumption that there is only one query parameter 
 // option available. So in the above example, I can write my server's GET route to only filter if req.query.type isn't undefined.
+
+// Also create a GET ONE route using route parameters. So if I want to return a specific avocado that I bought from mr lemon
+// and not the one I bought from wegmans.
