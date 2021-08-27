@@ -200,16 +200,16 @@ As in quadratic time complexity, you should avoid algorithms with exponential ru
 
 ### 5. Assessment
 
+    “Any fool can write code that a computer can understand. Good programmers write code that humans can understand.” – Martin Fowler
+
 Once completed:
 
 - prepare your code to 'push to production' by: removing all extra development logs and unneccesary comented out code or comments, format the code according to your style guidelines, and refactor where and if necessary.
 
-- push final code to your repo and send me a DM in slack asking to set up a 10 minute code review. Will be using this calendly link to schedule with me: 
+- push final code to your repo and set up a 10 minute code review via calendly with me @ https://calendly.com/patrick-morgan-bkny/c136-assessment-1
 
 - prepare to defend your code in the code review: think of your solutions in terms of efficiency (BigO), are there any edge cases you have not thought of and do they need to be addressed, think of why you chose to do things a certain way or if you got stuck somewhere and created a unique solution be ready to discuss why you made that choice, ...etc.
 
-- During the code review you may be asked to alter or expand on your code some come preapred with all files and folders open in your IDE ready to be shown and worked on. 
+- During the code review you may be asked to alter or expand on your code some come preapred with all files and folders open in your IDE ready to be shown and worked on.
 
 - Remeber to think out loud always, take your time when presented with new questions, up to an extent feel free to bounce questions or ideas of your reviewer, don't get to stressed out if things arent going your way — writing bad code does not make you a bad programmer, it makes you human.
-
-    include inspirational quote
