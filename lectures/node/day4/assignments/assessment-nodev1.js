@@ -20,7 +20,7 @@
 // Section Two: DOM, HTML, CSS
 // Part A: event-werkbook
 // Clone the following repository and complete all the exercises using vanilla 
-// JS only:
+// JS only: https://github.com/The-Software-Guild/event-werkbook-dom
 
 // Section Three: Node.js, Express.js, React.js
 // Part A: thunbergs-recycling-corp
@@ -68,6 +68,9 @@
 // Part B: react-refactor
 // Refactor the event werkbook from Section 2 Part A into a multi-page react application in which a single exercie is displayed per each page.
 // The application must be fully styled and responsive
+
+// PLEASE KEEP TRACK OF, AND ESTIMATE HOW LONG THE ASSESSMENT TOOK YOU TO COMPLETE THIS TIME. 
+// THIS IS PURELY FOR ME AND TO BETTER PACE THE FUTURE ASSIGNMENTS AND OVERALL COURSE PACING
 
 // how-to
 // https://www.take-a-screenshot.org/

@@ -13,7 +13,7 @@ app.use(morgan('dev'))
 
 
 // routes
-app.use('/home', ) // home router
+app.use('/home', homeRouter) // home router
 
 
 
