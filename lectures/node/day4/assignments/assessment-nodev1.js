@@ -8,14 +8,16 @@
 // If you have a function that generates random number between 1 to 5 
 // how could u generate a random number from 1 to 7 inclusively by using 
 // the afformentioned function?
-// ex) given fx: const random5 = () => {
-//   return 1 + Math.random() * 4;
-// }
+// ex) given fx: 
+const random5 = () => {
+  return 1 + Math.random() * 4;
+}
 
 // Part B: reverse-a-string
 // Given any string, write a function that returns the string in reverse.
-// ex) const initialString = 'hello'
-// expected return => 'olleh'
+// ex) 
+const initialString = 'hello' // 'olleh'
+
 
 // Section Two: DOM, HTML, CSS
 // Part A: event-werkbook
@@ -29,9 +31,9 @@
 
 // Overall Project Objectives:
 // Develop a Backend server with functioning endpoints able to CRUD the recycling items upon intake.
-// Parameterize the server with allowing for GET One and querying routes
+// Parameterize the server by allowing for GET ONE and querying routes
 // Use TDD to write unit tests for all routes
-// Make use of Express Router, error handling, 
+// Make use of Express Router, error handling, and status codes
 
 // Since we haven't started connecting to MongoDB quite yet, you can just save your items in an recycledItems 
 // array in your server code. Keep in mind that since it isn't being persisted anywhere, anytime you make a change 
@@ -51,13 +53,13 @@
 // Create GET & POST routes
 // Since we don't have a good way to tell the server which item we want to PUT and DELETE yet, we'll start out just by writing the GET and POST endpoints.
 
-// Using Express, create an API  /itemsIntake route
+// Using Express, create an API  /itemsIntake router
 // Write a GET endpoint that gets all recycled items from the array and sends them to the client.
 // Write a POST endpoint that adds a new item object to the array of recycledItems.
 // **Remember, you'll have to play the part of the database and add an id property to the incoming item before saving it to the array of items. 
 // This way you'll be able to easily look it up by its id property in order to update and delete it later.
 
-// Since you have now learned about req.params, add endpoints on the /itemsIntake route that allow you to:
+// Since you have now learned about req.params, add endpoints on the /itemsIntake router that allow you to:
 
 // DELETE an item from the recycledItems array, and
 // PUT (update) an existing item
