@@ -5,12 +5,12 @@ Learnign goals for node-day4 => A jam packed day culminating our experience toge
 ## Agenda
 
     1) Express Router
-    3) Introduction to Agile Project Management
-    4) Kanban vs. Scrum
-    5) Algorithm Solving Proccess Overview
-    6) What to Study & How
-    7) Recursion
-    8) Assessment
+    2) Introduction to Agile Project Management
+    3) Kanban vs. Scrum
+    4) Algorithm Solving Proccess Overview
+    5) What to Study & How
+    6) Time & Space Complexity - BigO Notation
+    7) Assessment
 
 ### 1. Express Router
 
@@ -42,7 +42,7 @@ That is, while there is value in the items on the right, we value the items on t
 
 For a deeper dive into Agile practices take a look into the [12 Principles of Agile Software Development](https://agilemanifesto.org/principles.html), or [Atlassian's Agile documentation](https://www.atlassian.com/agile/project-management)
 
-### 4. Kanban vs. Scrum
+### 3. Kanban vs. Scrum
 
 "Kanban vs. scrum” is a discussion about two different strategies for implementing an agile development or project management system. Kanban methodologies are continuous and more fluid, whereas scrum is based on short, structured work sprints
 
@@ -66,7 +66,7 @@ Kanban is all about visualizing your work, limiting [work in progress](https://w
 
     Japanese for Sign Board, Kanban is a popular framework used to implement agile and DevOps software development. It requires real-time communication of capacity and full transparency of work. Work items are represented visually on a kanban board, allowing team members to see the state of every piece of work at any time.
 
-### 5. Algorithm Solving Proccess Overview
+### 4. Algorithm Solving Proccess Overview
 
 1. Think. Analyze the problem silently and then verbalize your thoughts once they are collected. Feel free to take personal notes. Personally, there is nothing more uncomfrotbale then someone just jumping head first into a problem, that tends to show you have an itchy trigger finger and you don't thin through things.
 
@@ -78,7 +78,7 @@ Kanban is all about visualizing your work, limiting [work in progress](https://w
 
 5. Analyze your results in the terms of time and space complexity but also relations and importance.
 
-### 4. What to Study and How
+### 5. What to Study and How
 
 _see_assets_
 
@@ -86,57 +86,7 @@ _see_assets_
 
 [interviews school](https://interviews.school/)
 
-### 5. Recursion
-
-_see_assets_
-
-     "To first understand recursion you must first understand recursion"
-
-Recursion is a method of program design where you break apart a problem into smaller repeatable subtasks. The program will complete each subtask later combined to achieve a solution.
-
-The primary feature that defines recursion is that a recursive function calls itself, either directly or indirectly during execution. The call usually comes at the end of another operation using the passed data, a practice called **tail recursion**. This results in a looping structure that repeats the operation until an exit condition is met.
-
-Each pass through this loop brings the program closer to its desired state or solution, which is known as the **base case**. Once this base case is reached, the method will no longer loop back into its recursive step. Instead, the program will end.
-
-#### **Base Case**
-
-The base case (or base condition) is the state where the program’s solution has been reached. An achievable base case is essential to avoid an infinite loop. Recursive methods are built with two paths: the method first checks if the base state has been reached, if yes, the method ends and returns the current data, if not the method instead goes the other path and executes the recursive case, altering the input and calling the method again.
-
-     I like to think of and test/implement my base case first so as to "always" break out of the recurssive loop. Then we can handle the tail section.
-
-#### **Call Stack**
-
-The call stack is an integrated, hidden data structure within all modern programing languages. By storing active subroutines in a stack structure, the program is able to execute subroutines in the order they were received.
-
-Each recursive call in a program causes a nesting effect in the call stack, adding more subroutines that must be finished before the stack is empty.
-
-Broadly speaking, the larger the call stack, the more memory and time that is needed for the program to run (more on this later!).
-
-     recursive solutions are sensitive to errors. A recursive solution can easily have either an unreachable base case or with a recursive step which does not correctly progress toward the base case. Both of these errors cause a stack overflow error, meaning that the recursive call resulted in an infinite loop and was therefore terminated.
-
-#### **Tail Recursion**
-
-Tail recursion is when the recursive call for the next cycle is the final statement in a method.
-
-Tail end recursion is considered good practice whenever possible because it is easier to follow from a reader’s perspective and it can be optimized by modern compilers.
-
-Compilers can recognize that a tail ended method has completed all the operations within that call. Since all the work is complete, the program doesn’t need to store the instance of that call, known as the call frame.
-
-Modern compilers automatically recognize this and therefore perform tail call elimination, which eliminates all completed methods from the call stack.
-
-Compiler’s use tail call elimination to simplify program execution and free up memory. The program stores the currently executed call frame.
-
-Though right now we’ve only mentioned direct recursive calls, there are actually three ways to implement a recursive call – Direct, Indirect, and Anonymous.
-
-#### **Types of recursion**
-
-***GET-LINKS***
-
-- Structural vs. Generative
-
-- Direct, Indirect, and Anonymous Recursion
-
-### 7. Time & Space Complexity - BigO Notation
+### 6. Time & Space Complexity - BigO Notation
 
 When we consider the complexity of an algorithm, we shouldn’t really care about the exact number of operations that are performed; instead, **we should care about how the number of operations relates to the problem size.**
 
@@ -198,7 +148,7 @@ Exponential time complexity is usually seen in Brute-Force algorithms. These alg
 
 As in quadratic time complexity, you should avoid algorithms with exponential running times since they don’t scale well.
 
-### 5. Assessment
+### 7. Assessment
 
     “Any fool can write code that a computer can understand. Good programmers write code that humans can understand.” – Martin Fowler
 
