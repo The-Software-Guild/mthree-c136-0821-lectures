@@ -1,12 +1,14 @@
 # Week 2 Lecture - C136 Day0
 
-Learnign goals for react-day0 => 
+Learnign goals for react-day0 => 2.5 hrs of lecture hard stop ... start tmrw morn with wherever we left off
 
 ## Agenda
 
     1) End of Week 1 Refresh - BigO
     2) Recursion
-    3) Introduction to React.js
+    3) Vanilla JS DOM Review
+    4) Constructor Functions & Classes
+    5) Introduction to React.js
 
 ### 1. BigO
 
@@ -72,4 +74,174 @@ Though right now we’ve only mentioned direct recursive calls, there are actual
 
 - Direct, Indirect, and Anonymous Recursion
 
-### 3. Introduction to React.js
+### 3. Vanilla JS DOM Review
+
+### 4. Constructor Functions & Classes
+
+The constructor method is a special method of a class for creating and initializing an object of that class.
+
+    A constructor enables you to provide any custom initialization that must be done before any other methods can be called on an instantiated object.
+
+If you don't provide your own constructor, then a default constructor will be supplied for you. If your class is a base class, the default constructor is empty:
+
+```Javascript
+constructor()
+```
+
+If your class is a derived class, the default constructor calls the parent constructor, passing along any arguments that were provided:
+
+```Javascript
+constructor(...args) {
+    super(...args)
+}
+```
+
+- args for us are what we use to pass information between components ... aka props!
+
+There can be only one special method with the name "constructor" in a class. Having more than one occurrence of a constructor method in a class will throw a SyntaxError error.
+
+    A constructor can use the super keyword to call the constructor of the super class.
+
+
+
+### 5. Introduction to React.js
+
+REACT DEV TOOLS -> has everyone installed it? If not lets do that now
+
+React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.
+
+Declarative views make your code **more predictable** and easier to debug.
+
+React is component-based, meaning you can build **encapsulated** components that manage their own state, then compose them to make complex UIs.
+
+Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.
+
+- Setup
+
+CRA and how everything is connected with ReactDom.render()
+
+- Components
+
+Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.
+
+    2 types:
+
+    1. Functional
+    2. Class
+
+Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
+
+- Props
+
+When React sees an element representing a user-defined component, it passes JSX attributes and children to this component as a single object. We call this object “props”.
+
+**Props are Read-Only**
+
+Whether you declare a component as a function or a class, it must never modify its own props.
+
+    Functions are called “pure” because they do not attempt to change their inputs, and always return the same result for the same inputs.
+
+React is pretty flexible but it has a single strict rule:
+
+_**All React components must act like pure functions with respect to their props.**_
+
+#### **State**
+
+State is similar to props, but it is private and fully controlled by the component.
+
+In addition to taking input data (accessed via this.props), a component can maintain internal state data (accessed via this.state). When a component’s state data changes, the rendered markup will be updated by re-invoking render().
+
+    Internal state alows for true encapsulation and reusability.
+
+#### **Do Not Modify State Directly**
+
+- Instead, use setState()
+
+- The only place where you can assign this.state is the constructor.
+
+- State Updates May Be Asynchronous
+
+*React may batch multiple setState() calls into a single update for performance. Because this.props and this.state may be updated asynchronously, you should not rely on their values for calculating the next state.
+
+#### **A Simple Component**
+
+React components implement a render() method that takes input data and returns what to display. This example uses an XML-like syntax called JSX. Input data that is passed into the component can be accessed by render() via this.props.
+
+#### **A Stateful Component**
+
+In addition to taking input data (accessed via this.props), a component can maintain internal state data (accessed via this.state). When a component’s state data changes, the rendered markup will be updated by re-invoking render().
+
+In order to gain access to state or a components lifecycle method we must convert our functional component into a class. (you should always be writing components functional, until you need state or a lifecycle method and then convert it)
+
+_example.see_assets_
+
+#### **Events**
+
+Handling events with React elements is very similar to handling events on DOM elements. There are some syntax differences:
+
+- React events are named using camelCase, rather than lowercase.
+
+- With JSX you pass a function as the event handler, rather than a string.
+
+- You cannot return false to prevent default behavior in React. You must call preventDefault explicitly
+
+- You generally don’t need to call addEventListener to add listeners to a DOM element after it is created. Instead, just provide a listener when the element is initially rendered.
+
+- When you define a component using an ES6 class, a common pattern is for an event handler to be a method on the class.
+
+#### **This**
+
+You have to be careful about the meaning of _this_ in JSX callbacks. In JavaScript, class methods are not bound by default. If you forget to bind this.handleClick and pass it to onClick, this will be undefined when the function is actually called.
+
+This is not React-specific behavior; it is a part of how functions work in JavaScript. Generally, **if you refer to a method without () after it, such as onClick={this.handleClick}, you should bind that method.**
+
+If calling bind annoys you, there are two ways you can get around this. If you are using the experimental public class fields syntax, you can use class fields to correctly bind callbacks.
+
+```Javascript
+class LoggingButton extends React.Component {
+  // This syntax ensures `this` is bound within handleClick.
+  // Warning: this is *experimental* syntax.
+  handleClick = () => {
+    console.log('this is:', this);
+  }
+
+  render() {
+    return (
+      <button onClick={this.handleClick}>
+        Click me
+      </button>
+    );
+  }
+}
+```
+
+*This syntax is enabled by default in Create React App.
+
+If you aren’t using class fields syntax, you can use an arrow function in the callback:
+
+```Javascript
+class LoggingButton extends React.Component {
+  handleClick() {
+    console.log('this is:', this);
+  }
+
+  render() {
+    // This syntax ensures `this` is bound within handleClick
+    return (
+      <button onClick={() => this.handleClick()}>
+        Click me
+      </button>
+    );
+  }
+}
+```
+
+The problem with this syntax is that a different callback is created each time the LoggingButton renders. In most cases, this is fine. However, if this callback is passed as a prop to lower components, those components might do an extra re-rendering. We generally recommend binding in the constructor or using the class fields syntax, to avoid this sort of performance problem.
+
+**_show binding of this in constructor_**
+
+### 5. Lifescyle Methods *
+
+In applications with many components, it’s very important to free up resources taken by the components when they are destroyed.
+
+    We can declare special methods on the component class to run some code when a component mounts and unmounts. These methods are called “lifecycle methods”.
