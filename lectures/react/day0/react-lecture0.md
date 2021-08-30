@@ -79,6 +79,20 @@ Though right now we’ve only mentioned direct recursive calls, there are actual
 
 ### 3. Vanilla JS DOM Review
 
+#### **The Document Object**
+
+*_main.js_
+
+#### **The Document Object**
+
+### 4. Constructor Functions & Classes
+
+
+#### **Classes**
+
+##### **constructor()**
+
+
 ### 4. Constructor Functions & Classes
 
 The constructor method is a special method of a class for creating and initializing an object of that class.
