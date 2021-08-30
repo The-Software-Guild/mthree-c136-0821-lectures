@@ -74,6 +74,9 @@ Though right now we’ve only mentioned direct recursive calls, there are actual
 
 - Direct, Indirect, and Anonymous Recursion
 
+*_so.js_
+*_nth.js_
+
 ### 3. Vanilla JS DOM Review
 
 ### 4. Constructor Functions & Classes
@@ -101,7 +104,6 @@ constructor(...args) {
 There can be only one special method with the name "constructor" in a class. Having more than one occurrence of a constructor method in a class will throw a SyntaxError error.
 
     A constructor can use the super keyword to call the constructor of the super class.
-
 
 
 ### 5. Introduction to React.js
@@ -239,9 +241,3 @@ class LoggingButton extends React.Component {
 The problem with this syntax is that a different callback is created each time the LoggingButton renders. In most cases, this is fine. However, if this callback is passed as a prop to lower components, those components might do an extra re-rendering. We generally recommend binding in the constructor or using the class fields syntax, to avoid this sort of performance problem.
 
 **_show binding of this in constructor_**
-
-### 5. Lifescyle Methods *
-
-In applications with many components, it’s very important to free up resources taken by the components when they are destroyed.
-
-    We can declare special methods on the component class to run some code when a component mounts and unmounts. These methods are called “lifecycle methods”.
