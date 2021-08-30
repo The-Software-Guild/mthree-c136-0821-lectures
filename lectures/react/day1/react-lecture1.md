@@ -4,7 +4,10 @@ Learnign goals for react-day0 =>
 
 ## Agenda
 
-    1) react-day0 recap
-    2) 
+    1) End of Week 1 Refresh - BigO
+    2) Recursion
+    3) Vanilla JS DOM Review
+    4) Constructor Functions & Classes
+    5) Introduction to React.js
 
-### 1. react-day0 Recap
+### 

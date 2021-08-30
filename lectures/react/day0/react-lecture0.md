@@ -1,6 +1,6 @@
 # Week 2 Lecture - C136 Day0
 
-Learnign goals for react-day0 => 2.5 hrs of lecture hard stop ... start tmrw morn with wherever we left off
+Learnign goals for react-day0 => We depart from the introductory portion of the course, making way for a more structured and consistent remainder. Our goal is 2.5 hrs of lecture with a hard stop — picking up where we left off, if needed, the following morning. This week's focus is React.js while filling in the final pieces of vanilla JS we need to be sucessfull front-end developers. We begin the week by reviewing BigO notation and covering a concept known as recursion. We end the week by using React to consume the API's we have been building in the previous week with Node & Express.
 
 ## Agenda
 
@@ -83,17 +83,80 @@ Though right now we’ve only mentioned direct recursive calls, there are actual
 
 *_main.js_
 
-#### **The Document Object**
+#### **Intro To The DOM**
+
+The DOM (Document Object Model) is a object that represents the HTML and CSS of a web page. The DOM allows us to use JavaScript to interface with what the user sees.
+
+There are a few ways to select elements from the DOM.
+
+    document.getElementById()
+
+    document.getElementsByClassName()
+
+    document.querySelector()
+
+Notice the "s" on elements in getElementsByClassName. **Any DOM method with the plural elements will return an array.** You are able to loop over each element, or select an individual element with bracket notation.
+
+    document.createElement() takes a string of the tag name you want to create. It then returns the element.
+
+The most common way to append this to the DOM is to first select the parent, and call it's .appendChild.
+
+You may be asking why we wouldn't just write this in our HTML.
+
+JavaScript helps us dynamically render our apps. We'll be using JavaScript to get us dynamic data, and then change how the webpage looks depending.
+
+If a user wanted to take things from a list, or add to a list, we would use JavaScript to control that.
+
+Much of your DOM manipulation will happen after the user does something. To make the user able to change what they see, you'll need to learn to use [event listeners](https://coursework.vschool.io/event-listeners/)
 
 ### 4. Constructor Functions & Classes
 
+Sometimes we need a "blueprint" for creating many objects of the same "type".
+
+The way to create an "object type", is to use an object constructor function.
+
+Objects of the same type are created by calling the constructor function with the new keyword:
+
+```javascript
+const myFather = new Person("John", "Doe", 50, "blue");
+
+const myMother = new Person("Sally", "Rally", 48, "green");
+```
+
+#### **The this Keyword**
+
+In JavaScript, the thing called _**this**_ is the object that "owns" the code.
+
+The value of _**this**_, when used in an object, is the object itself.
+
+In a constructor function _**this**_ does not have a value. It is a substitute for the new object. The value of _**this**_ will become the new object when a new object is created.
+
+#### **Built-in JavaScript Constructors**
 
 #### **Classes**
 
+Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on prototypes but also have some syntax and semantics that are not shared with ES5 class-like semantics.
+
+Classes are in fact "special functions", and just as you can define function expressions and function declarations, the class syntax has two components: class expressions and class declarations.
+
+One way to define a class is using a class declaration. To declare a class, you use the class keyword with the name of the class ("Rectangle" here).
+
+```javascript
+class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+}
+```
+
+An important difference between function declarations and class declarations is that **function declarations are hoisted and class declarations are not**. You first need to declare your class and then access it
+
+#### **Strict Mode**
+
+The body of a class is executed in strict mode, i.e., code written here is subject to stricter syntax for increased performance, some otherwise silent errors will be thrown, and certain keywords are reserved for future versions of ECMAScript.
+
 ##### **constructor()**
-
-
-### 4. Constructor Functions & Classes
 
 The constructor method is a special method of a class for creating and initializing an object of that class.
 
@@ -119,6 +182,9 @@ There can be only one special method with the name "constructor" in a class. Hav
 
     A constructor can use the super keyword to call the constructor of the super class.
 
+#### **Static Methods & Properties**
+
+The static keyword defines a static method or property for a class. Static members (properties and methods) are called without instantiating their class and cannot be called through a class instance. Static methods are often used to create utility functions for an application, whereas static properties are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.
 
 ### 5. Introduction to React.js
 
