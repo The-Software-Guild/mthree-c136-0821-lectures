@@ -20,15 +20,15 @@ const someArray = [0, true, 4, 199]
 // constructor function
 function Person(nameParam, ageParam) {
      this.name = nameParam,
-     this.age = ageParam,
-     this.speak = function() {
-          console.log('hello ' + this.name + ' ' + this.age)
-     }
+          this.age = ageParam,
+          this.speak = function () {
+               console.log('hello ' + this.name + ' ' + this.age)
+          }
 }
 
 // create an object
 const person1 = new Person('patrick', 31); // instatiation
-const person2 = new Person('whoeever', 21); 
+const person2 = new Person('whoeever', 21);
 // const person2 = new Person('whoeever', 21); 
 // const person2 = new Person('whoeever', 21); 
 // const person2 = new Person('whoeever', 21); 
@@ -40,6 +40,74 @@ console.log(person2.speak()) // whoever 21
 
 
 // classes in js are syntactical sugar for constructor functions
+
+
+const stringEx = 'hello'
+
+// const reverseString = (str, function name() {
+
+// }) => {
+//      str.split('').reverse().join('')
+
+//      return str
+// }
+
+// console.log(reverseString(stringEx)) // olleh
+
+
+// anonnmyous
+console.log(x * 2)
+
+//named
+function iHaveAName() {
+
+}
+
+// arrow es6=> named
+const arrow = () => {
+
+}
+
+// constructor
+function Person() {
+
+}
+
+// hello
+// hell
+// hel
+// he
+
+function reverse(str) {
+     if (str === "") {
+          return ""; // if the given string is empty we return out of our function
+     } else {
+          return reverse(str.substr(1)) + str.charAt(0);
+          return str.split('').reverse().join('')
+     }
+}
+
+// 0 + o === o
+// o + l === ol
+// l + ol === oll
+// e + oll === olle
+// h + olle === olleh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
