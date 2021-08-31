@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import Box from './components/Box'
 
+// app.js => routing information
 function App() {
+  const someVar = 'text'
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Box
+        number={5} 
+        name={{text: 'circle'}}/>
+      <Box name={{text: 'square'}}/>
+      <Box name={{text: 'box'}}/>
+      <Box name={{text: 'rectangle'}}/>
+      <Box name={{text: 'parallelogram'}}/>
     </div>
   );
 }

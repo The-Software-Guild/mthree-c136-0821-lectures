@@ -21,7 +21,7 @@ Learnign goals for react-day1 => Finish our introduction to React.js and begin d
 
 The body of a class is executed in strict mode, i.e., code written here is subject to stricter syntax for increased performance, some otherwise silent errors will be thrown, and certain keywords are reserved for future versions of ECMAScript.
 
-##### **constructor()**
+#### **constructor()**
 
 The constructor method is a special method of a class for creating and initializing an object of that class.
 
@@ -205,7 +205,7 @@ Tests can also serve as **documentation** for new people joining your team. For 
 
 Last but not least, more automated testing means less time spent with manual QA, freeing up valuable time.
 
-#### Static Analysis
+#### **Static Analysis**
 
 The first step to improve your code quality is to start using static analysis tools. Static analysis checks your code for errors as you write it, but without running any of that code.
 
@@ -213,7 +213,7 @@ Linters analyze code to catch common errors such as unused code and to help avoi
 
 Type checking ensures that the construct you’re passing to a function matches what the function was designed to accept, preventing passing a string to a counting function that expects a number, for instance.
 
-#### Writing Testable Code
+#### **Writing Testable Code**
 
 To start with tests, you first need to write code that is testable. Consider an aircraft manufacturing process - before any model first takes off to show that all of its complex systems work well together, individual parts are tested to guarantee they are safe and function correctly. For example, wings are tested by bending them under extreme load; engine parts are tested for their durability; the windshield is tested against simulated bird impact.
 
@@ -231,7 +231,7 @@ There are a few ways to [test React components](https://reactjs.org/docs/testing
 
 - Running a complete app in a realistic browser environment (also known as “end-to-end” tests).
 
-### Structuring Tests
+### **Structuring Tests**
 
 Your tests should be short and ideally test only one thing. Let's start with an example unit test written with Jest:
 
@@ -254,7 +254,7 @@ If your test has many steps or many expectations, you probably want to split it 
 
 Lastly, as developers we like when our code works great and doesn't crash. With tests, this is often the opposite. Think of a failed test as of a good thing! When a test fails, it often means something is not right. This gives you an opportunity to fix the problem before it impacts the users.
 
-#### Unit tests
+#### **Unit tests**
 
 Unit tests cover the smallest parts of code, like individual functions or classes.
 
@@ -262,4 +262,4 @@ When the object being tested has any dependencies, you’ll often need to mock t
 
 The great thing about unit tests is that they are quick to write and run. Therefore, as you work, you get fast feedback about whether your tests are passing. Jest even has an option to continuously run tests that are related to code you’re editing: Watch mode.
 
-#### Mocking & Integration Tests ??
+#### **Mocking & Integration Tests ?**?
