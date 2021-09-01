@@ -1,128 +1,20 @@
-# Week 2 Lecture - C136 Day1
+# Week 2 Lecture - C136 Day2
 
-Learnign goals for react-day1 => Finish our introduction to React.js and begin diving into some more advanced topics such as: event handling, routing, and testing with a libraries called Jest & Enzyme.
+Learnign goals for react-day1 => 
 
 ## Agenda
 
-    1) react-day0-review
-    2) Introduction to React.js
-    3) Event Handling
-    4) Routing
-    5) Unit Tests With Jest & Enzyme
+    1) react-day1-review
+    2) 
 
-### 1. react-day0-review
+### 1. react-day1-review
 
-- Big O
-- Recursion
-- Vanilla JS DOM Review
-- Constructor Functions & Classes
+- Introduction to React.js
+- Event Handling
+- Routing
+- Unit Tests With Jest & Enzyme
 
-#### **Strict Mode**
-
-The body of a class is executed in strict mode, i.e., code written here is subject to stricter syntax for increased performance, some otherwise silent errors will be thrown, and certain keywords are reserved for future versions of ECMAScript.
-
-#### **constructor()**
-
-The constructor method is a special method of a class for creating and initializing an object of that class.
-
-    A constructor enables you to provide any custom initialization that must be done before any other methods can be called on an instantiated object.
-
-If you don't provide your own constructor, then a default constructor will be supplied for you. If your class is a base class, the default constructor is empty:
-
-```Javascript
-constructor()
-```
-
-If your class is a derived class, the default constructor calls the parent constructor, passing along any arguments that were provided:
-
-```Javascript
-constructor(...args) {
-    super(...args)
-}
-```
-
-- args for us are what we use to pass information between components ... aka props!
-
-There can be only one special method with the name "constructor" in a class. Having more than one occurrence of a constructor method in a class will throw a SyntaxError error.
-
-    A constructor can use the super keyword to call the constructor of the super class.
-
-#### **Static Methods & Properties**
-
-The static keyword defines a static method or property for a class. Static members (properties and methods) are called without instantiating their class and cannot be called through a class instance. Static methods are often used to create utility functions for an application, whereas static properties are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.
-
-### 2. Introduction to React.js
-
-REACT DEV TOOLS -> has everyone installed it? If not lets do that now
-
-React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.
-
-Declarative views make your code **more predictable** and easier to debug.
-
-React is component-based, meaning you can build **encapsulated** components that manage their own state, then compose them to make complex UIs.
-
-Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.
-
-- Setup
-
-CRA and how everything is connected with ReactDom.render()
-
-- Components
-
-Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.
-
-    2 types:
-
-    1. Functional
-    2. Class
-
-Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
-
-- Props
-
-When React sees an element representing a user-defined component, it passes JSX attributes and children to this component as a single object. We call this object “props”.
-
-**Props are Read-Only**
-
-Whether you declare a component as a function or a class, it must never modify its own props.
-
-    Functions are called “pure” because they do not attempt to change their inputs, and always return the same result for the same inputs.
-
-React is pretty flexible but it has a single strict rule:
-
-_**All React components must act like pure functions with respect to their props.**_
-
-#### **State**
-
-State is similar to props, but it is private and fully controlled by the component.
-
-In addition to taking input data (accessed via this.props), a component can maintain internal state data (accessed via this.state). When a component’s state data changes, the rendered markup will be updated by re-invoking render().
-
-    Internal state alows for true encapsulation and reusability.
-
-#### **Do Not Modify State Directly**
-
-- Instead, use setState()
-
-- The only place where you can assign this.state is the constructor.
-
-- State Updates May Be Asynchronous
-
-*React may batch multiple setState() calls into a single update for performance. Because this.props and this.state may be updated asynchronously, you should not rely on their values for calculating the next state.
-
-#### **A Simple Component**
-
-React components implement a render() method that takes input data and returns what to display. This example uses an XML-like syntax called JSX. Input data that is passed into the component can be accessed by render() via this.props.
-
-#### **A Stateful Component**
-
-In addition to taking input data (accessed via this.props), a component can maintain internal state data (accessed via this.state). When a component’s state data changes, the rendered markup will be updated by re-invoking render().
-
-In order to gain access to state or a components lifecycle method we must convert our functional component into a class. (you should always be writing components functional, until you need state or a lifecycle method and then convert it)
-
-_example.see_assets_
-
-### 3. Events
+#### 3. Events
 
 Handling events with React elements is very similar to handling events on DOM elements. There are some syntax differences:
 
