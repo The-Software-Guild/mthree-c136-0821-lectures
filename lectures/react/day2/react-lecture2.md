@@ -1,6 +1,6 @@
 # Week 2 Lecture - C136 Day2
 
-Learnign goals for react-day1 => 
+Learnign goals for react-day2 => We will be covering some inredibly important high level conecpt that are the basis for ALL of react.
 
 ## Agenda
 

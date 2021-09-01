@@ -5,7 +5,7 @@ function Box(props) {
      console.log(props)
      return (
           <div>
-               {props.number} hello world again from {props.name.text}
+               {props.number}hello world again from {props.name.text}
           </div>
      )
 }
