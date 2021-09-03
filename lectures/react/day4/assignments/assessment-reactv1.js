@@ -11,8 +11,8 @@
 // Your implementation must not use the === or !== operators.
 
 // Part B: Prototypal Inheritance
-// You are given a function, , that takes four parameters, , ,  and , denoting the length of the square's edges.
-// Using prototype properties, add a method to  named  that prints true if a Square object has equal edges and false if they are unequal.
+// You are given a function, Square, that takes four parameters, A, B, C, and D, denoting the length of the square's edges.
+// Using prototype properties, add a method to Square named isSquare that prints true if a Square object has equal edges and false if they are unequal.
 function Square(A, B, C, D) {
   this.A = A;
   this.B = B;
@@ -22,7 +22,7 @@ function Square(A, B, C, D) {
 
 // example test code
 // function processData(input) {
-//   var sq1 = new Square(input[0], input[1], input[2], input[3]);
+//   let sq1 = new Square(input[0], input[1], input[2], input[3]);
 //   sq1.isSquare();
 
 //   console.log(Object.getPrototypeOf(sq1));
@@ -48,6 +48,7 @@ function Square(A, B, C, D) {
 // Follow TDD and test all routes and react components using mocha/chai & jest/enzyme respectively
 
 // Getting Started
+
 // Step 1: Data - create an array of static data (fake database), hard coded in your server. Each object in the array must include at least:
 
 // 2 strings
@@ -55,6 +56,7 @@ function Square(A, B, C, D) {
 // 1 array
 // 1 number
 // An ID - unique identifier. Use the uuid package to generate unique IDs.
+
 // Step 2: Endpoints - Backend using Express - Create a server with the following functionality:
 
 // Create a GET endpoint that returns all objects from the array and sends them to the client.
@@ -62,15 +64,17 @@ function Square(A, B, C, D) {
 // Create a PUT endpoint that can update an object in the array.
 // Create a DELETE endpoint that can delete an object in the array.
 // Create a GET ONE endpoint that returns one object from the dataset.
-// Create an endpoint that will query the dataset and return object(s) from the based on certain criteria. 
+// Create an endpoint that will query the dataset and return object(s) from it the based on certain criteria. 
 // Example. Your dataset includes football players and the team they play for. Create a route that will return all players that play for a specific team.
+
 // Step 3: Status codes & Error Handling - Backend
 
 // Create a global error handler in server.js file.
-// Include at least one of each of the following status codes in your routes:
+// Include at least one of each of the following status codes in all of your routes:
 // 200
 // 201
 // 500
+
 // Step 4: Frontend using Axios - Build a client-side React interface to function with your backend server, including the following CRUD operations:
 
 // Create (POST) a new object(s) to the dataset you created in Step 1.
@@ -85,7 +89,8 @@ function Square(A, B, C, D) {
 // Your final web application should have the following:
 
 // Web application (interact in browser)
-// The web app should list the items in the dataset (the initial ones created in Step 1), then update, in real time (does not require refreshing the browser), to list any modifications made, such as Add, Delete, Edit items.
+// The web app should list the items in the dataset (the initial ones created in Step 1), then update, 
+// in real time (does not require refreshing the browser), to list any modifications made, such as Add, Delete, Edit items.
 // A form to Add items
 // An option (ex. button) to Delete items
 // An option (ex. button) to Edit items
@@ -104,7 +109,7 @@ function Square(A, B, C, D) {
 // We should be following TDD and all code written here on out should be fully tested up to unit tests depth
 // All further code should be 100% fully es6. Not a mix match of some var declerations and some let/const, ...etc
 // From here on out, all assessments must be 'fully styled and responsive' and described earlier — using a combination of media queries, css flexbox & grid
-// Make sure all of your code is "PR & code review ready" per the shared resources in slack, please reach out if you need more detail on what I am looking for
+// Make sure all of your code is 'PR & code review ready' per the shared resources in slack, please reach out if you need more detail on what I am looking for
 // In your PR's you can include any relevant media (screenshots, gifs, etc)
 // I have moved the assignment 'vending-machine' due date until Wednesday morning September 8th at 10:00am est when class starts
 

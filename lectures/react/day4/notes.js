@@ -12,10 +12,53 @@ let premiumUser = {		//repeat of the above for this object
 
 premiumUser.__proto__ = user;	//user is the prototype of premiumUser
 
-console.log(premiumUser.showAccess);	// "true"
+// console.log(premiumUser.showAccess);	// "true"
+
+// new Date
+// new Array
+// new Object
+// new String
+
+// Date.prototype // on the top of or protypical chain
+// const plantin = new Banana()
+// const plantin2 = new Banana()
+// const plantin3 = new Banana()
 
 
-// ex2) Inheriting Methods
+// Banana.newProperty = 'this is new property value'
+// plantin3.newMethod = function () {
+//      //something
+// }
+
+// make any new bananas objects or interact or change the plantain3 in any way 
+// the prefered method of adding new or reasigning properties and methods in JS
+// is ALWAYS via protypes
+
+// internal function programming
+// const someFx = (cb) => {
+//      const newObj = {
+//           key: 'values'
+//      }
+
+//      // newObj.hasOwnProperty()
+
+//      // do somestuff
+
+//      cb(newObj)
+
+//      // do more stuff
+
+//      const newFx = () => {
+//           newObj.key = 'new value'
+//      }
+// }
+
+// Pokemon.callPokemon = function() {
+
+// }
+
+
+// // ex2) Inheriting Methods
 // let user = {
 //      email: "educative@gmail.com", //create and set email property
 //      IDnumber: "#12345",		//create and set the Idnumber property
@@ -86,7 +129,12 @@ console.log(premiumUser.showAccess);	// "true"
 
 // equality
 
-// By this point, you might be worried about objects. You might have heard that equality doesn’t work with objects, 
+
+// console.log(Object.is(true, false)) // false
+
+
+// By this point, you might be worried about objects. 
+// You might have heard that equality doesn’t work with objects, 
 // or that it compares “references”.
 
 let banana = {};
@@ -94,15 +142,26 @@ let cherry = banana;
 let chocolate = cherry;
 cherry = {};
 
+let dwarves = 7;
+let continents = '7';
+let worldWonders = 3 + 4;
 
-// console.log(Object.is(banana, cherry)); // ?
-// console.log(Object.is(cherry, chocolate)); // ?
-// console.log(Object.is(chocolate, banana)); // ?
+// console.log(Object.is(dwarves, worldWonders)); true
+// console.log(dwarves === worldWonders); // true
+
+// console.log(3 === 3); // true
+// console.log(NaN === NaN); // false
+// console.log(Object.is(NaN, NaN)); // true
+// console.log(-0 === 0); // true
+
+// console.log(Object.is(banana, cherry)); // false {} is a newly instantiated object inheritnging from the global Object prototype
+// console.log(Object.is(cherry, chocolate)); // false 
+// console.log(Object.is(chocolate, banana)); // true
 
 // loose
-console.log([[]] == ''); // ?
-console.log(true == [1]); // ?
-console.log(false == [0]); // ?
+// console.log([[]] == ''); // ?
+// console.log(true == [1]); // ?
+// console.log(false == [0]); // ?
 
 
 

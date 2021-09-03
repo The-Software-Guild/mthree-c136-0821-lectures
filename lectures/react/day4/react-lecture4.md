@@ -1,6 +1,6 @@
 # Week 2 Lecture - C136 Day4
 
-Learnign goals for react-day4 => 
+Learnign goals for react-day4 => We are filling in the last bit of vanilla JS that you need to be fullstack MERN devlopers.
 
 ## Agenda
 
@@ -127,7 +127,7 @@ In JavaScript, there are several kinds of equality.
 
 - Same Value Equality: ```Object.is(a, b)```.
 
-#### **Same Value Equality: Object.is(a, b)**
+#### **Same Value Equality: ```Object.is(a, b)```**
 
 In JavaScript, ```Object.is(a, b)``` tells us if a and b are the same value:
 
