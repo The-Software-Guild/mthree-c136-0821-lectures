@@ -1,78 +1,112 @@
-// assessment #1 - Node.js
+// assessment #2 - React.js
 
-// You must complete all 3 sections by the beginning of class Monday 
-// August 30th @ 10:00am est. Handed in via github classroom: https://classroom.github.com/a/CvmX-Ntg
+// You must complete both sections by the beginning of class Tuesday 
+// September 7th @ 10:00am est. Handed in via github classroom: https://classroom.github.com/a/KYUdJSjg
+// Once finished book your code review with me via the following link: https://calendly.com/patrick-morgan-bkny/c136-assessment-2
 
-// Section One: JS
-// Part A: 5-random-7
-// If you have a function that generates random number between 1 to 5 
-// how could u generate a random number from 1 to 7 inclusively by using 
-// the afformentioned function?
-// ex) given fx: 
-const random5 = () => {
-  return 1 + Math.random() * 4;
+// Section One: Prototypes & Equivalence in JS
+// Refresh: https://www.youtube.com/watch?v=2rkEbcptR64
+// Part A: Equivalence
+// Write a function called strictEquals(a, b) that returns the same value as a === b. 
+// Your implementation must not use the === or !== operators.
+
+// Part B: Prototypal Inheritance
+// You are given a function, , that takes four parameters, , ,  and , denoting the length of the square's edges.
+// Using prototype properties, add a method to  named  that prints true if a Square object has equal edges and false if they are unequal.
+function Square(A, B, C, D) {
+  this.A = A;
+  this.B = B;
+  this.C = C;
+  this.D = D;
 }
 
-// Part B: reverse-a-string
-// Given any string, write a function that returns the string in reverse.
-// ex) 
-const initialString = 'hello' // 'olleh'
+// example test code
+// function processData(input) {
+//   var sq1 = new Square(input[0], input[1], input[2], input[3]);
+//   sq1.isSquare();
+
+//   console.log(Object.getPrototypeOf(sq1));
+// }
+
+// process.stdin.resume();
+// process.stdin.setEncoding("ascii");
+// _input = "";
+// process.stdin.on("data", function (input) {
+//   _input += input;
+// });
+
+// process.stdin.on("end", function () {
+//   _input = _input.split(' ').map(num => Number(num));
+//   processData(_input);
+// });
 
 
-// Section Two: DOM, HTML, CSS
-// Part A: event-werkbook
-// Clone the following repository and complete all the exercises using vanilla 
-// JS only: https://github.com/The-Software-Guild/event-werkbook-dom
+// Section Two: React.js
+// Part A: everythings-a-to-do-list
+// Purpose: Create a server using Express in Node, that serves up any data of your choice, and create a frontend application in React to interact with the server.
 
-// Section Three: Node.js, Express.js, React.js
-// Part A: thunbergs-recycling-corp
-// You have just started working at an early-stage high-growth startup that has been tasked with a global recycling initiative. 
-// Your job as a junior developer is to create an application wherein you can track your local team's efforts.
+// Follow TDD and test all routes and react components using mocha/chai & jest/enzyme respectively
 
-// Overall Project Objectives:
-// Develop a Backend server with functioning endpoints able to CRUD the recycling items upon intake.
-// Parameterize the server by allowing for GET ONE and querying routes
-// Use TDD to write unit tests for all routes
-// Make use of Express Router, error handling, and status codes
+// Getting Started
+// Step 1: Data - create an array of static data (fake database), hard coded in your server. Each object in the array must include at least:
 
-// Since we haven't started connecting to MongoDB quite yet, you can just save your items in an recycledItems 
-// array in your server code. Keep in mind that since it isn't being persisted anywhere, anytime you make a change 
-// to your server code and restart the server, you'll lose all the current changes.
+// 2 strings
+// 1 boolean
+// 1 array
+// 1 number
+// An ID - unique identifier. Use the uuid package to generate unique IDs.
+// Step 2: Endpoints - Backend using Express - Create a server with the following functionality:
 
-// A recycled item object should have the following properties:
+// Create a GET endpoint that returns all objects from the array and sends them to the client.
+// Create a POST endpoint that adds a new object to the array.
+// Create a PUT endpoint that can update an object in the array.
+// Create a DELETE endpoint that can delete an object in the array.
+// Create a GET ONE endpoint that returns one object from the dataset.
+// Create an endpoint that will query the dataset and return object(s) from the based on certain criteria. 
+// Example. Your dataset includes football players and the team they play for. Create a route that will return all players that play for a specific team.
+// Step 3: Status codes & Error Handling - Backend
 
-// Name
-// Description
-// Recyclable (boolean)
-// Quantity (number)
-// Price Per Unit (number)
-// ID (a unique identifier. Use the uuid package to generate unique ids. - npm install uuid and check the docs to see how to use it. 
-// It's as simple as requiring the package and running uuid.v4())
-// Since there isn't a front-end setup yet, you'll just use Postman to interact with the server and update the data.
+// Create a global error handler in server.js file.
+// Include at least one of each of the following status codes in your routes:
+// 200
+// 201
+// 500
+// Step 4: Frontend using Axios - Build a client-side React interface to function with your backend server, including the following CRUD operations:
 
-// Create GET & POST routes
-// Since we don't have a good way to tell the server which item we want to PUT and DELETE yet, we'll start out just by writing the GET and POST endpoints.
+// Create (POST) a new object(s) to the dataset you created in Step 1.
+// Read (GET) a list of all the objects in the dataset.
+// Update (PUT) an object(s) in the dataset.
+// Delete (DELETE) an object(s) from the dataset.
+// GET ONE
+// Querying endpoint (i.e. a search bar that lets you filter through the list of _________)
+// Step 5: The frontend React app must be fully styled and responsive.
 
-// Using Express, create an API  /itemsIntake router
-// Write a GET endpoint that gets all recycled items from the array and sends them to the client.
-// Write a POST endpoint that adds a new item object to the array of recycledItems.
-// **Remember, you'll have to play the part of the database and add an id property to the incoming item before saving it to the array of items. 
-// This way you'll be able to easily look it up by its id property in order to update and delete it later.
+// Outcome:
+// Your final web application should have the following:
 
-// Since you have now learned about req.params, add endpoints on the /itemsIntake router that allow you to:
+// Web application (interact in browser)
+// The web app should list the items in the dataset (the initial ones created in Step 1), then update, in real time (does not require refreshing the browser), to list any modifications made, such as Add, Delete, Edit items.
+// A form to Add items
+// An option (ex. button) to Delete items
+// An option (ex. button) to Edit items
+// When a User presses the Edit button, additional options to Submit the Edit and/or Cancel the Edit should be available to the User
+// Postman interaction
+// All backend endpoints created are functional:
+// GET
+// GET One
+// GET query selection (Step 2. f. above)
+// POST
+// PUT
+// DELETE
+// Each of status codes (at least 3) created are functional and display when the endpoint they are associated with is called in Postman.   
 
-// DELETE an item from the recycledItems array, and
-// PUT (update) an existing item
-// You'll need to pass the uuid you added when POSTing new items as a URL Parameter to the endpoint in order to have a reference to the object you want to update or delete.
+// reminders:
+// We should be following TDD and all code written here on out should be fully tested up to unit tests depth
+// All further code should be 100% fully es6. Not a mix match of some var declerations and some let/const, ...etc
+// From here on out, all assessments must be 'fully styled and responsive' and described earlier — using a combination of media queries, css flexbox & grid
+// Make sure all of your code is "PR & code review ready" per the shared resources in slack, please reach out if you need more detail on what I am looking for
+// In your PR's you can include any relevant media (screenshots, gifs, etc)
+// I have moved the assignment 'vending-machine' due date until Wednesday morning September 8th at 10:00am est when class starts
 
-// Lastly, take a screenshot demonstrating the complete routing functionality of this server application via Postman and also any unit tests
-
-// Part B: react-refactor
-// Refactor the event werkbook from Section 2 Part A into a multi-page react application in which a single exercie is displayed per each page.
-// The application must be fully styled and responsive
-
-// PLEASE KEEP TRACK OF, AND ESTIMATE HOW LONG THE ASSESSMENT TOOK YOU TO COMPLETE THIS TIME. 
-// THIS IS PURELY FOR ME AND TO BETTER PACE THE FUTURE ASSIGNMENTS AND OVERALL COURSE PACING
-
-// how-to
+// how-to:
 // https://www.take-a-screenshot.org/
