@@ -32,6 +32,13 @@
 //            - Time (should auto-fill with system date &time)
 //            - Date (should auto-fill with system date &time)
 //            - Assignee
+
+// Users should have the following fields:
+//            - Name
+//            - Password
+//            - Email
+//            - Admin
+
 // All Data created should be saved in MongoDB. And displayed in an INTERACTIVE table. I should be able to click on cells and interact with each bug
 // by seeign more details, leaving notes, adjusting due date, etc, ...etc.
 // Build a programming logic for SLA that every bug should be resolve in 3 days, after third the day the unresolved bug should be highlighted.
