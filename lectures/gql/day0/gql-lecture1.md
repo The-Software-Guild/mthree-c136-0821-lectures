@@ -6,6 +6,7 @@ Learnign goals => Today we touch on Token Based Authentication and React Context
 
     1) Auth Basics
     2) React Context API
+    3) Redirects
 
 ### 1. Auth Basics
 
@@ -42,3 +43,7 @@ Context is designed to share data that can be considered “global” for a tree
 Context is primarily used when some data needs to be accessible by many components at different nesting levels. Apply it sparingly because it makes component reuse more difficult.
 
 **If you only want to avoid passing some props through many levels, [component composition](https://reactjs.org/docs/composition-vs-inheritance.html) is often a simpler solution than context.**
+
+### 3. Redirects
+
+[https://reactrouter.com/web/example/auth-workflow](https://reactrouter.com/web/example/auth-workflow)
