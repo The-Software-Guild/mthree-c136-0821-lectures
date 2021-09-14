@@ -24,7 +24,7 @@ Learnign goals => We will sped today diving into GraphQL & Apollo, slightly new 
 
 -explicit UI updates => end of req <-> res cycle
 
-- more abstraction and component structure
+-more abstraction and component structure
 
 ### 2. Introduction to GraphQL
 
