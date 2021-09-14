@@ -60,8 +60,70 @@ GraphQL creates a uniform API across your entire application without being limit
 
 #### Server
 
-https://github.com/apollographql/apollo-server
+The best way to build a production-ready TypeScript GraphQL server that connects to any microservice, API, or database. Compatible with all popular JavaScript frameworks and deployable in serverless environments.
+
+#### **Connect your services**
+
+[Apollo Server](https://github.com/apollographql/apollo-server)
+
+Apollo Server is an open-source, spec-compliant GraphQL server that's compatible with any GraphQL client, including Apollo Client. It's the best way to build a production-ready, self-documenting GraphQL API that can use data from any source.
+
+You can use Apollo Server as:
+
+- A stand-alone GraphQL server, including in a serverless environment
+
+- An add-on to your application's existing Node.js middleware (such as Express or Fastify)
+
+- A gateway for a federated data graph
+
+Apollo Server provides:
+
+- Straightforward setup, so your client developers can start fetching data quickly
+
+- Incremental adoption, allowing you to add features as they're needed
+
+- Universal compatibility with any data source, any build tool, and any GraphQL client
+
+- Production readiness, enabling you to ship features faster
 
 #### Client
 
-https://github.com/apollographql/apollo-client
+Apollo Client is a way to consume a data graph. Apollo, as a company, gives you multiple libraries to this that are suited to wherever you’re building your app: web, ios, and android. Apollo Client is about binding your data to your UI with GraphQL.
+
+The industry-standard open-source GraphQL client for web, iOS and Android apps with everything you need to fetch, cache, and modify application data.
+
+#### **Connect your apps**
+
+[Apollo Client](https://github.com/apollographql/apollo-client)
+
+#### **Bind GraphQL data to your UI with one function call**
+
+Help your team focus on what your product needs, not how to get it. Declare your data and Apollo Client will handle the rest. Never worry about caching, network status, or getting data into your UI ever again.
+
+    Declarative data fetching
+
+Write a query and receive data without manually tracking loading, error, or network states.
+
+    Reactive data cache
+
+Cut down on network traffic and keep data consistent throughout your application with Apollo Client’s normalized reactive data cache.
+
+    Excellent dev experience
+
+Enjoy cross stack type safety, runtime cache inspectors, and full featured editor integrations to keep you writing applications faster.
+
+    Compatible and adoptable
+
+Use any build setup and any GraphQL API. Drop Apollo Client into any app seamlessly without re-architecting your entire data strategy.
+
+    Designed for modern UIs
+
+Take advantage of modern UI architectures in the web, iOS, and Android ecosystems.
+
+    Community driven
+
+Share knowledge with thousands of developers, thanks to our active open source community.
+
+#### **Cache Normalization**
+
+Any library or framework can send a query to a GraphQL endpoint. Where Apollo Client shines is in its result caching. It uses a normalized cache to dramatically speed up the feel of your application. By reducing the number of network requests made to your GraphQL server, the cache improves the responsiveness of your application client while automatically keeping UI components up to date as new data is fetched.
