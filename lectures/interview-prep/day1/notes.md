@@ -5,9 +5,8 @@ Learnign goals => We begin our review of javascript by exploring a few different
 ## Agenda
 
     1) Day 0 Recap
-    2) Call
-    3) Apply
-    4) Bind
+    2) bind()
+    3) call() & apply()
     5) Currying
 
 ### 1. Day 0 Recap
@@ -41,19 +40,50 @@ Up until now we have treated functions as objects that are composed of a name (o
 
 ![js-this-fx-execution-context](https://i.ibb.co/j8zCQw5/call-apply-bind.png)
 
-    The bind() method creates a new function that, when called, has its this keyword set to the provided value.
+    The bind() method creates a new function that, when called, has its this keyword set to the provided value with a given sequence of arguments preceding any provided when the new function is called.
+
+```javascript
+function.bind(thisArg[, arg1[, arg2[, ...]]])
+```
 
 ### 3. call() & apply()
 
-The `call()` method calls a function with a given `this` value and arguments provided individually. What that means, is that we can call any function, and explicitly specify what `this` should reference within the calling function.
+The `call()` method calls a function with a given `this` value and arguments provided individually.
+
+```javascript
+function.call(thisArg, arg1, arg2, ...)
+```
+
+What that means, is that we can call any function, and explicitly specify what `this` should reference within the calling function.
 
     call() is really similar to the bind() method
 
-This can definitely save us from writing hacky code (even though we are all still hackerzzz).
+This can definitely save us from writing hacky code
+.
 The main differences between bind() and call() is that the call() method:
-Accepts additional parameters as well
-Executes the function it was called upon right away.
-The call() method does not make a copy of the function it is being called on.
-call() and apply() serve the exact same purpose. The only difference between how they work is that call() expects all parameters to be passed in individually, whereas apply() expects an array of all of our parameters.
+
+- Accepts additional parameters as well
+
+- Executes the function it was called upon right away.
+
+- The `call()` method does not make a copy of the function it is being called on.
+
+`call()` and `apply()` serve the exact same purpose. The only difference between how they work is that `call()` expects all parameters to be passed in individually, whereas `apply()` expects an array of all of our parameters.
+
+```javascript
+function.apply(thisArg, [argsArray])
+```
 
 ### 5. Currying
+
+Currying is not native to the JS language. It refers to the transformation of a function between callable executions. JavaScript implementations usually both keep the function callable normally and return the partial if the arguments count is not enough. **Currying allows us to easily get partials.**
+
+ex) `f(a, b, c)` into callable as `f(a)(b)(c)`
+
+    Currying doesn’t call a function. It just transforms it.
+
+#### **Caveats**
+
+- **Fixed-length functions only.** The currying requires the function to have a fixed number of arguments. A function that uses rest parameters, such as `f(...args)`, can’t be curried this way.
+
+- **A little more than currying.** By definition, currying should convert `sum(a, b, c)` into `sum(a)(b)(c)`. But most implementations of currying in JavaScript are advanced, as described: they also keep the function callable in the multi-argument variant.
