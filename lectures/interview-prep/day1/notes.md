@@ -7,7 +7,7 @@ Learnign goals => We begin our review of javascript by exploring a few different
     1) Day 0 Recap
     2) bind()
     3) call() & apply()
-    5) Currying
+    4) Currying
 
 ### 1. Day 0 Recap
 
@@ -74,7 +74,7 @@ The main differences between bind() and call() is that the call() method:
 function.apply(thisArg, [argsArray])
 ```
 
-### 5. Currying
+### 4. Currying
 
 Currying is not native to the JS language. It refers to the transformation of a function between callable executions. JavaScript implementations usually both keep the function callable normally and return the partial if the arguments count is not enough. **Currying allows us to easily get partials.**
 
