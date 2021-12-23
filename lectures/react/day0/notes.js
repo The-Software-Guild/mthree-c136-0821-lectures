@@ -39,7 +39,7 @@ console.log(person2.speak()) // whoever 21
 
 
 
-// classes in js are syntactical sugar for constructor functions
+//  in js are syntactical sugar for constructor functions
 
 
 const stringEx = 'hello'

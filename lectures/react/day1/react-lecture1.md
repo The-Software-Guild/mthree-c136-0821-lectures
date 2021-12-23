@@ -262,4 +262,4 @@ When the object being tested has any dependencies, you’ll often need to mock t
 
 The great thing about unit tests is that they are quick to write and run. Therefore, as you work, you get fast feedback about whether your tests are passing. Jest even has an option to continuously run tests that are related to code you’re editing: Watch mode.
 
-#### **Mocking & Integration Tests ?**?
+#### **Mocking & Integration Tests**
